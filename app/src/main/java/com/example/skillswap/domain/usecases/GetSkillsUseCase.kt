@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class GetSkillsUseCase @Inject constructor(private val skillsRepository: SkillsRepository) {
-    fun action(): List<Skill> {
+    fun action(): Flow<List<Skill>> {
 
         return skillsRepository.getSkills()
 //        return listOf(
